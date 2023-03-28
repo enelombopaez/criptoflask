@@ -18,4 +18,4 @@ def index():
 
 @app.route("/new")
 def hola():
-    return "Hola qué tal?"
+    return render_template('index.html')
