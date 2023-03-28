@@ -1,3 +1,15 @@
+
+:root {
+    --primary-color: #695a5fde;
+    --secondary-color: #19a187;
+  
+    --medium-gray: #666;
+    --error-color: var(--primary-color);
+  
+    --default-border: solid thin var(--secondary-color)
+  }
+
+
 h1 {
     border: 2px #eee solid;
     color: brown;
@@ -5,11 +17,34 @@ h1 {
     padding: 10px;
 }
 
+h2 {
+    color: black;
+    text-align: center;
+}
+
 header {
     background-color: var(--primary-color);
-    color: white;
+    color: black;
     height: 50px;
     font-size: large;
     line-height: 50px;
     padding-left: 25px;
+    border: solid 2px black;
   }
+
+  nav {
+    color: black;
+    line-height: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+footer {
+    background-color: var(--primary-color);
+    color: black;
+    height: 45px;
+    font-size: large;
+    line-height: 45px;
+    padding-left: 5px;
+    border: solid 1px black;
+}

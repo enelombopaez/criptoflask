@@ -1,12 +1,39 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de criptomonedas</title>
+</head>
+<body>
+    <header>myCRYPTO</header>
 
-{% block content %}
-    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
-    {% for post in posts %}
-        <a href="#">
-            <h2>{{ post['title'] }}</h2>
-        </a>
-        <span class="badge badge-primary">{{ post['created'] }}</span>
-        <hr>
-    {% endfor %}
-{% endblock %}
+    <nav>
+        Inicio / Nuevo / Compra
+    </nav>
+    <h2>Movimientos</h2>
+    <section class="seccion-movimientos">
+        <table class="paper">
+          <thead>
+            <tr>
+              <th class="titulo-tabla">Fecha</th>
+              <th class="titulo-tabla">Hora</th>
+              <th class="titulo-tabla">Q</th>
+              <th class="titulo-tabla numero">To</th>
+              <th class="titulo-tabla acciones">Q</th>
+              <th class="titulo-tabla acciones">P.U</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpo-tabla">
+            <!-- Aquí tenemos que cargar los movimientos que leamos desde la API -->
+          </tbody>
+        </table>
+      </section>
+
+      <footer class="pie-pagina">
+        R® 2023 Keep Coding Learn programming bootcamp  
+      </footer>
+</body>
+</html>
