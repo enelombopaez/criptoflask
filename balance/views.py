@@ -21,5 +21,5 @@ def purchase():
     return render_template('purchase.html')
 
 @app.route("/status")
-def purchase():
+def status():
     return render_template('status.html')
