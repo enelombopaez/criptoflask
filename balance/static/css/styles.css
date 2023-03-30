@@ -57,3 +57,18 @@ footer {
 .inner{
     display:ruby-text;
 }
+
+table.paper {
+    width: 100%;
+}
+  
+.titulo-tabla {
+    border-bottom: solid thin black;
+    text-align: left;
+}
+  
+.fecha,
+.numero,
+.acciones {
+  text-align: right;
+}
