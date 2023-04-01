@@ -43,6 +43,7 @@ footer {
     background-color: var(--primary-color);
     color: black;
     height: 45px;
+    margin-top: 30px;
     font-size: large;
     line-height: 45px;
     padding-left: 5px;
@@ -66,7 +67,12 @@ table.paper {
     border-bottom: solid thin black;
     text-align: left;
 }
-  
+
+.datos-tabla {
+    text-align: left;
+}
+
+
 .fecha,
 .numero,
 .acciones {
