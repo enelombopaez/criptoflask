@@ -16,6 +16,10 @@ def index():
     return render_template('index.html', posts=posts)
 
 
-@app.route("/new")
-def hola():
-    return "Hola qué tal?"
+@app.route("/purchase")
+def purchase():
+    return render_template('purchase.html')
+
+@app.route("/status")
+def status():
+    return render_template('status.html')
