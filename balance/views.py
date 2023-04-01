@@ -1,6 +1,8 @@
 import sqlite3
 from . import app
 from flask import Flask, render_template
+from .forms import PurchaseForm
+from config import COINS
 
 def get_db_connection():
     conn = sqlite3.connect('database.db')
@@ -18,7 +20,9 @@ def index():
 
 @app.route("/purchase")
 def purchase():
-    return render_template('purchase.html')
+    form = PurchaseForm()
+    coins = COINS
+    return render_template('purchase.html', coins=coins, form=form)
 
 @app.route("/status")
 def status():
