@@ -9,11 +9,19 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
+def get_id():
+    conn = sqlite3.connect('database.db')
+    cur = conn.cursor()
+    cur.execute('SELECT * FROM crypto')
+    post= cur.fetchall()
+    conn.close()
+    return post
+
 
 @app.route("/")
 def index():
     conn = get_db_connection()
-    posts = conn.execute('SELECT * FROM posts').fetchall()
+    posts = conn.execute('SELECT * FROM crypto').fetchall()
     conn.close()
     return render_template('index.html', posts=posts)
 
@@ -27,3 +35,8 @@ def purchase():
 @app.route("/status")
 def status():
     return render_template('status.html')
+
+@app.route("/test")
+def test():
+    rows=get_id()
+    return render_template('test.html', rows=rows)
