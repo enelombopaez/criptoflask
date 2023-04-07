@@ -1,8 +1,11 @@
-DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS crypto;
 
-CREATE TABLE posts (
+CREATE TABLE crypto (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    title TEXT NOT NULL,
-    content TEXT NOT NULL
+    dateoftrans TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    timeoftrans TEXT NOT NULL,
+    from_currency TEXT NOT NULL,
+    from_quantity REAL,
+    to_concurrency TEXT,
+    to_quantity REAL
 );
