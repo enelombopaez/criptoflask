@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STATUS</title>
+{% extends 'base.html' %}
+{% block contenido%}
 </head>
 <body>
 
-    <!– juguetear con los botones para que estén uno en cada margen –>
-    <div class="inline-block">
-        <div class="buttons">
-          <button class="status": style="position: absolute;">Button</button>
-          <button class="purchase">Button</button>
-        </div>
-    </div>
-    
-    
+    <h2>Compra de criptomonedas </h2>
+
+        <h1>Invertido: </h1>  <!-- Add here the value from SQL -->
+        <h1>Valor actual: </h1> <!-- Add here the value from SQL -->
+
+        <a href="/">
+            <button style="background-color: gray; color: black; border-radius: 2px;     height:20px; 
+            width:100px; 
+            margin: -20px -50px; 
+            position:relative;
+            top:50%; 
+            left:50%; ">Home</button>
+        </a>
+
+        
 </body>
 </html>
+{% endblock contenido %}
