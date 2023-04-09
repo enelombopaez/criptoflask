@@ -27,12 +27,16 @@
             </tr>
           </thead>
           <tbody id="cuerpo-tabla">
-            <td class="datos-tabla">30/03/2023</td>
-            <td class="datos-tabla">18:48:20</td>
-            <td class="datos-tabla">EUR</td>
-            <td class="datos-tabla">BTC</td>
-            <td class="datos-tabla">1</td>
-            <td class="datos-tabla">12424</td>
+            {% for row in rows %}
+            <tr>
+                <td class="datos-tabla">{{ row[1]}}</td>
+                <td class="datos-tabla">{{ row[2]}}</td>
+                <td class="datos-tabla">{{ row[3]}}</td>
+                <td class="datos-tabla">{{ row[4]}}</td>
+                <td class="datos-tabla">{{ row[5]}}</td>
+                <td class="datos-tabla">{{ row[6]}}</td>
+            </tr>
+            {% endfor %}
             <!-- Aquí tenemos que cargar los movimientos que leamos desde la API -->
           </tbody>
         </table>
